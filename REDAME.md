@@ -1,0 +1,14 @@
+## This project is using Python Kafka connetor to stream data into broker then save to SQLite.
+Project components
+
+1. Kafka Broker
+1. Kafaka Schema Registry
+1. Kafka Control Centre
+1. SQLite instance
+1. Docker Composer file to configure up 
+1. Python Kafka producer
+1. Python Kafka SQLite connector
+
+Highight of this project:
+
+1. KRaft architect
