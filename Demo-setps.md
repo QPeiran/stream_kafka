@@ -16,7 +16,7 @@ docker compose exec kafka-0 /opt/bitnami/kafka/bin/kafka-topics.sh \
     --bootstrap-server kafka-0:9092,kafka-1:9092
 ```
 
-3. Mimic the producer (from a new ternimal)
+3. Mimic the producer on node 0(from a new ternimal)
 ```
 docker compose exec kafka-0 /opt/bitnami/kafka/bin/kafka-console-producer.sh \
   --bootstrap-server kafka-0:9092,kafka-1:9092 \
@@ -24,7 +24,7 @@ docker compose exec kafka-0 /opt/bitnami/kafka/bin/kafka-console-producer.sh \
   --topic my-test-topic
 ```
 
-4. Mimic the consumer (from a new ternimal)
+4. Mimic the consumer on node 1(from a new ternimal)
 ```
 docker compose exec kafka-1  /opt/bitnami/kafka/bin/kafka-console-consumer.sh \
   --bootstrap-server kafka-0:9092,kafka-1:9092 \
@@ -32,3 +32,6 @@ docker compose exec kafka-1  /opt/bitnami/kafka/bin/kafka-console-consumer.sh \
   --topic my-test-topic \
   --from-beginning
 ```
+
+
+5. Enable the Kafaka UI on port 8080
