@@ -4,7 +4,7 @@ import json
 my_client = KafkaClient(bootstrap_servers = 'localhost:9092') ## the default server
 print('Kafka Client connected:'+ str(my_client.bootstrap_connected()))
 
-admin_client = KafkaAdminClient(bootstrap_servers = 'localhost:9094') ## the external server
+admin_client = KafkaAdminClient(bootstrap_servers = ['localhost:9094']) ## the external server
 topic_list = admin_client.list_topics()
 print(topic_list)
 
